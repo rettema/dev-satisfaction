@@ -18,10 +18,12 @@
 <page key="conformance" name="Conformance"/>
 <page key="downloads" name="Downloads"/>
 <page key="errors" name="Handling Errors"/>
+<page key="history" name="History"/>
 <page key="index" name="Home"/>
 <page key="safety_security" name="Safety and Security"/>
 <page key="components" name="Satisfaction Components"/>
 <page key="specification" name="Specification"/>
 <page key="toc" name="Table of Contents"/>
+<page key="testing" name="Testing"/>
 <page key="workflow" name="Workflow"/>
 </specification>

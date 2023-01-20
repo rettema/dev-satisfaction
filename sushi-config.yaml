@@ -52,6 +52,7 @@ menu:
     Conformance: conformance.html
     Handling Errors: errors.html
   Safety and Security: safety_security.html
+  Testing: testing.html
   Artifacts:
     Capability Statements: artifacts.html#1
     Operations: artifacts.html#2
@@ -78,8 +79,12 @@ pages:
       title: Handling Errors
   safety_security.md:
     title: Safety and Security
+  testing.md:
+    title: Testing
   downloads.md:
     title: Downloads
+  history.md:
+    title: History
 
 # ╭───────────────────────────────────────package-list.json────────────────────────────────────────╮
 # │  To control the package-list.json using this config, uncomment and set the "history" property. │

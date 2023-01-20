@@ -26,7 +26,7 @@ RuleSet: TSMetadata (id, baseUrl, date, title, description)
   * name = "FHIR project team"
   * telecom.system = #url
   * telecom.value = "http://hl7.org/fhir"
-* copyright = "(c) Health Level 7 (HL7) International 2022"
+* copyright = "(c) Health Level 7 (HL7) International 2023"
 
 // =================================================
 // TestScript origin and destination declarations
