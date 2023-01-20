@@ -1,0 +1,16 @@
+{
+    "package-id": "hl7.fhir.uv.dev-satisfaction",
+    "title": "Developer Satisfaction",
+    "canonical": "http://hl7.org/fhir/uv/dev-satisfaction",
+    "introduction": "This IG provides detailed guidance that helps implementers use FHIR-based interactions to support specific exchanges of developer satisfaction measurements.",
+    "list": [
+        {
+            "version": "current",
+            "desc": "Continuous Integration Build (latest in version control) - Content subject to frequent changes.",
+            "path": "http://build.fhir.org/ig/HL7/dev-satisfaction",
+            "status": "ci-build",
+            "fhirversion": "4.0.1"
+        }
+    ],
+    "category": "Foundation"
+}
