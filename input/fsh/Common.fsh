@@ -1,15 +1,15 @@
 RuleSet: ResourceJurisdiction
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 
-RuleSet: ResourceCommonR4
+RuleSet: ResourceCommonR5
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
-* fhirVersion = #4.0.1
+* fhirVersion = #5.0.0
 
 // Operation common definitions
 RuleSet:       OperationCommon
 * jurisdiction        = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * status              = #active
-* date                = "2023-01-19"
+* date                = "2023-04-21"
 * publisher           = "AEGIS.net, Inc."
 // * contact[0].telecom[0].system = #url
 // * contact[0].telecom[0].value  = "https://hl7.org/Special/committees/fiwg/index.cfm"

@@ -76,18 +76,16 @@ RuleSet: TSBaseProfile (resourceType)
 //example:
 //* insert TSBaseProfile(Patient)
 
-* profile[+]
+* profile[+] = "http://hl7.org/fhir/StructureDefinition/{resourceType}"
   * id = "{resourceType}Profile"
-  * reference = "http://hl7.org/fhir/StructureDefinition/{resourceType}"
 
 RuleSet: TSProfile (id, reference)
 //add a TestScript profile element needed for a validateProfileId assert
 //example:
 //* insert TSProfile(uscore-patient-profile,"http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient")
 
-* profile[+]
+* profile[+] = {reference}
   * id = "{id}"
-  * reference = {reference}
 
 // =================================================
 // TestScript variable declarations
@@ -177,16 +175,17 @@ RuleSet: TSSetupOperationResource (opCode, resourceType, format, origin, destina
   * encodeRequestUrl = true
   * origin = {origin}
 
-RuleSet: TSSetupAssert(description, warning, direction)
+RuleSet: TSSetupAssert(description, direction, stopTestOnFail, warning)
 //more flexible assert definition that can be used in less constricted testscript authoring but needs the actual assert to be defined afterwords
 //example: 
-//* insert TSSetupAssert("Confirm that the returned HTTP Header Content-Type is present.",false,#response)
+//* insert TSSetupAssert("Confirm that the returned HTTP Header Content-Type is present.",#response,false,false)
 //* setup.action[=].assert.headerField = "Content-Type"
 //* setup.action[=].assert.operator = #notEmpty
 
 * setup.action[+].assert
   * description = {description}
   * direction = #{direction}
+  * stopTestOnFail = {stopTestOnFail}
   * warningOnly = {warning}
 
 // =================================================
@@ -245,16 +244,17 @@ RuleSet: TSTestOperationResource (opCode, resourceType, format, origin, destinat
   * origin = {origin}
   * params = {params}
 
-RuleSet: TSTestAssert(description, warning, direction, property, value)
+RuleSet: TSTestAssert(description, direction, stopTestOnFail, warning, property, value)
 //more flexible assert definition that can be used in less constricted testscript authoring but needs the actual assert to be defined afterwords
 //example: 
-//* insert TSTestAssert("Confirm that the returned HTTP Header Content-Type is present.",false,#response)
+//* insert TSTestAssert("Confirm that the returned HTTP Header Content-Type is present.",#response,false,false,responseCode,"200")
 //* test[=].action[=].assert.headerField = "Content-Type"
 //* test[=].action[=].assert.operator = #notEmpty
 
 * test[=].action[+].assert
   * description = {description}
   * direction = {direction}
+  * stopTestOnFail = {stopTestOnFail}
   * warningOnly = {warning}
   * {property} = {value}
 

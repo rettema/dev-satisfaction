@@ -2,7 +2,7 @@ Alias: $exp = http://hl7.org/fhir/StructureDefinition/capabilitystatement-expect
 
 RuleSet: CapabilityCommon
 * status              = #active
-* date                = "2023-01-19"
+* date                = "2023-04-21"
 * publisher           = "AEGIS.net, Inc."
 // * contact[0].telecom[0].system = #url
 // * contact[0].telecom[0].value  = "https://hl7.org/Special/committees/fiwg/index.cfm"
@@ -64,20 +64,19 @@ RuleSet: SupportOperation (name, canonical, expectation)
 * rest.resource[=].operation[=].extension[0].url = $exp
 * rest.resource[=].operation[=].extension[0].valueCode = {expectation}
 
-Instance:      CapabilitySatisfactionServerR4
+Instance:      CapabilitySatisfactionServerR5
 InstanceOf:    CapabilityStatement
 Usage:         #definition
-Title:         "R4 Developer Satisfaction Server Capability Statement"
+Title:         "R5 Developer Satisfaction Server Capability Statement"
 Description:   "CapabilityStatement describing the minimal required capabilities of a FHIR Server supporting the Developer Satisfaction functionality."
-* insert ResourceCommonR4
-* id            = "dev-satisfaction-server-r4"
-* name          = "CapabilitySatisfactionServerR4"
-* url           = "http://hl7.org/fhir/uv/dev-satisfaction/CapabilityStatement/dev-satisfaction-server-r4"
+* insert ResourceCommonR5
+* id            = "dev-satisfaction-server-r5"
+* name          = "CapabilitySatisfactionServerR5"
+* url           = "http://hl7.org/fhir/uv/dev-satisfaction/CapabilityStatement/dev-satisfaction-server-r5"
 * description   = "CapabilityStatement describing the required and optional capabilities of a FHIR Server supporting the Developer Satisfaction functionality."
 * implementationGuide = "http://hl7.org/fhir/uv/dev-satisfaction/ImplementationGuide/hl7.fhir.uv.dev-satisfaction"
 * insert CapabilityCommon
 * rest[+].mode  = #server
-* rest[=].mode.extension[http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation].valueCode = #SHALL
 
 * insert SupportResource(Observation, #SHALL)
 * insert SupportProfile(http://hl7.org/fhir/uv/dev-satisfaction/StructureDefinition/dev-satisfaction-observation, #SHALL)

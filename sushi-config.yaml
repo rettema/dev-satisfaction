@@ -27,16 +27,22 @@ contact:
 description: The Developer Satisfaction Implementation Guide is a fictitious guide used to
   demonstrate the use of TDD techniques that accelerate the implementation of an IG
 license: CC0-1.0
-fhirVersion: 4.0.1
+fhirVersion: 5.0.0
 parameters:
-  show-inherited-invariants: false
-  apply-jurisdiction: true
-  apply-publisher: true
+  show-inherited-invariants: 'false'
+  usage-stats-opt-out: 'true'
+  logging: progress
+  shownav: 'true'
+  active-tables: 'false'
+  apply-contact: 'true'
+  apply-jurisdiction: 'true'
+  apply-publisher: 'true'
+  apply-version: 'true'
   excludettl: 'true'
   excludemap: 'true'
 
 copyrightYear: 2023+
-releaseLabel: Standard for Trial Use
+releaseLabel: ci-build
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮

@@ -3,22 +3,20 @@ This page defines how CapabilityStatements are used and the expectations for man
 
 Note that the conformance verbs - SHALL, SHOULD, MAY - used in this guide are defined by the [FHIR Conformance Rules](http://hl7.org/fhir/conformance-rules.html).
 
-### Conformance in FHIR R4
+### Conformance in FHIR R5
 In order to claim conformance with this guide, a server:
 * SHALL support the `Observation` resource (read/write).
 * SHALL support the `$get-satisfaction` operation.
 
-Note that in FHIR R4, there is no representation of Subscription Topics.  Detailed discussion can be found on the [Satisfaction Components](components.html) page.
-
 <a name="conformance-artifacts"></a>
 #### Conformance Artifacts
-FHIR Servers claiming conformance to this Implementation Guide must conform to the expectations described in the Capability Statement appropriate to the implemented FHIR version.  For FHIR R4 servers, this guide defines the [R4 Server CapabilityStatement](CapabilityStatement-dev-satisfaction-server-r4.html).
+FHIR Servers claiming conformance to this Implementation Guide must conform to the expectations described in the Capability Statement appropriate to the implemented FHIR version.  For FHIR R5 servers, this guide defines the [R5 Server CapabilityStatement](CapabilityStatement-dev-satisfaction-server-r5.html).
 
 <a name="profile-support"></a>
 ##### Profile Support
 Profile Support refers to the support of the profiles defined in this guide in a system exposing FHIR resources. Specifically, a conformant server:
 * SHALL communicate all profile data elements that are mandatory by that profile's StructureDefinition. 
-* SHOULD declare conformance with the Developer Satisfaction Server Capability Statement by including its official URL in the server's `CapabilityStatement.instantiates` element: `http://hl7.org/fhir/uv/dev-satisfaction/CapabilityStatement/dev-satisfaction-server-r4`.
+* SHOULD declare conformance with the Developer Satisfaction Server Capability Statement by including its official URL in the server's `CapabilityStatement.instantiates` element: `http://hl7.org/fhir/uv/dev-satisfaction/CapabilityStatement/dev-satisfaction-server-r5`.
 * SHALL specify the full capability details from the CapabilityStatement it claims to implement, including declaring support for the Developer Satisfaction Profile by including its official URL in the server's `CapabilityStatement.rest.resource.supportedProfile` element for the Observation resource type: `http://hl7.org/fhir/uv/dev-satisfaction/StructureDefinition/DEV-SAT-Observation`
 
 <a name="must-support"></a>
