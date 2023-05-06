@@ -15,6 +15,11 @@ The following package file includes an NPM package file used by many of the FHIR
 * [JSON Examples](examples.json.zip)
 * [XML Examples](examples.xml.zip)
 
+### Testing
+
+* [JSON TestScript Testing Package](r5-hl7.fhir.uv.dev-satisfaction.json.zip)
+* [XML TestScript Testing Package](r5-hl7.fhir.uv.dev-satisfaction.xml.zip)
+
 ### Downloadable Copy of this Specification
 
 A downloadable version of this IG is available so it can be hosted locally:

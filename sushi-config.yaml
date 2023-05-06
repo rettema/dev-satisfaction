@@ -5,7 +5,7 @@
 # │  configuration from now on. You may delete your package.json as it is no longer needed.        │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 
-# ╭─────────────────────────ImplementationGuide-hl7.fhir.us.carin-bb.json──────────────────────────╮
+# ╭─────────────────────ImplementationGuide-hl7.fhir.uv.dev-satisfaction.json──────────────────────╮
 # │  The properties below are used to create the ImplementationGuide resource. For a list of       │
 # │  supported properties, see:                                                                    │
 # │  http://build.fhir.org/ig/HL7/fhir-shorthand/branches/beta/sushi.html#ig-development           │
@@ -29,6 +29,9 @@ description: The Developer Satisfaction Implementation Guide is a fictitious gui
 license: CC0-1.0
 fhirVersion: 5.0.0
 parameters:
+  path-resource:
+    - input/resources
+    - fsh-generated/resources
   show-inherited-invariants: 'false'
   usage-stats-opt-out: 'true'
   logging: progress
@@ -60,11 +63,14 @@ menu:
   Safety and Security: safety_security.html
   Testing: testing.html
   Artifacts:
-    Capability Statements: artifacts.html#1
-    Operations: artifacts.html#2
-    Profiles: artifacts.html#3
-    TestScripts: artifacts.html#4
-    Examples: artifacts.html#5
+    Actor Definitions: artifacts.html#requirements-actor-definitions
+    Formal Requirements: artifacts.html#requirements-formal-requirements
+    Capability Statements: artifacts.html#behavior-capability-statements
+    Operations: artifacts.html#behavior-operation-definitions
+    Profiles: artifacts.html#structures-resource-profiles
+    TestPlans: artifacts.html#testing-artifacts-testplans
+    TestScripts: artifacts.html#testing-artifacts-testscripts
+    Examples: artifacts.html#example-example-instances
   Support:
     Downloads: downloads.html
 

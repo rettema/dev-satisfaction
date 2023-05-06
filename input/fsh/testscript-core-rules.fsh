@@ -2,7 +2,7 @@
 // Alias Definitions
 // =================================================
 
-Alias: $OP = http://terminology.hl7.org/CodeSystem/testscript-operation-codes
+Alias: $OP = http://hl7.org/fhir/restful-interaction
 Alias: $OPEXT = http://terminology.hl7.org/CodeSystem/testscript-operation-codes-extended
 
 // =================================================
@@ -244,7 +244,20 @@ RuleSet: TSTestOperationResource (opCode, resourceType, format, origin, destinat
   * origin = {origin}
   * params = {params}
 
-RuleSet: TSTestAssert(description, direction, stopTestOnFail, warning, property, value)
+RuleSet: TSTestAssert(description, direction, stopTestOnFail, warning)
+//more flexible assert definition that can be used in less constricted testscript authoring but needs the actual assert to be defined afterwords
+//example: 
+//* insert TSTestAssert("Confirm that the returned HTTP Header Content-Type is present.",#response,false,false)
+//* test[=].action[=].assert.headerField = "Content-Type"
+//* test[=].action[=].assert.operator = #notEmpty
+
+* test[=].action[+].assert
+  * description = {description}
+  * direction = {direction}
+  * stopTestOnFail = {stopTestOnFail}
+  * warningOnly = {warning}
+
+RuleSet: TSTestAssertWithProp(description, direction, stopTestOnFail, warning, property, value)
 //more flexible assert definition that can be used in less constricted testscript authoring but needs the actual assert to be defined afterwords
 //example: 
 //* insert TSTestAssert("Confirm that the returned HTTP Header Content-Type is present.",#response,false,false,responseCode,"200")
@@ -257,6 +270,3 @@ RuleSet: TSTestAssert(description, direction, stopTestOnFail, warning, property,
   * stopTestOnFail = {stopTestOnFail}
   * warningOnly = {warning}
   * {property} = {value}
-
-
-

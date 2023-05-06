@@ -1,3 +1,5 @@
+**Disclaimer:** The Developer Satisfaction Implementation Guide is a fictitious guide used to demonstrate the use of TDD techniques that accelerate the implementation of an IG.
+
 The Developer Satisfaction Implementation Guide demonstrates the Developer Satisfaction process that can be leveraged in FHIR IG authoring and subsequent implementation efforts.
 
 ### About This Guide
@@ -10,7 +12,7 @@ The goal of publishing this guide is to define a standard method of a Developer 
 
 See
 * [https://www.vocabulary.com/dictionary/satisfaction](https://www.vocabulary.com/dictionary/satisfaction)
-* [\[I Can't Get No\] Satisfaction](https://www.youtube.com/watch?v=DeUpb-ALfUzc&usg=AOvVaw30ZoP2JYQZiKUFS9vhr8A3)
+* [\[I Can't Get No\] Satisfaction](https://www.youtube.com/watch?v=ROAKlnaMuRw&pp=ygUbcm9sbGluZyBzdG9uZXMgc2F0aXNmYWN0aW9u)
 
 ### Authors and Contributors
 

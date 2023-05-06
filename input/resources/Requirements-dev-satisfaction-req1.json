@@ -1,0 +1,76 @@
+{
+  "resourceType" : "Requirements",
+  "id" : "dev-satisfaction-req1",
+  "url": "http://hl7.org/fhir/uv/dev-satisfaction/Requirements/dev-satisfaction-req1",
+  "name": "DevSatisfactionGetReq1",
+  "title": "Developer Satisfaction Requirements for Requestor and Responder",
+  "status" : "draft",
+  "date": "2023-04-21",
+  "publisher": "Health Level 7 (HL7) International",
+  "contact": [
+    {
+      "name": "FHIR project team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org/fhir"
+        }
+      ]
+    }
+  ],
+  "description" : "Developer Satisfaction Requirements for Requestor and Responder",
+  "copyright": "(c) Health Level 7 (HL7) International 2023",
+  "actor" : [
+    "http://hl7.org/fhir/uv/dev-satisfaction/ActorDefinition/dev-satisfaction-requestor",
+    "http://hl7.org/fhir/uv/dev-satisfaction/ActorDefinition/dev-satisfaction-responder"
+  ],
+  "statement" : [
+    {
+      "key" : "req1-1",
+      "label" : "requirement1-1",
+      "conformance" : [
+        "SHALL"
+      ],
+      "requirement" : "The Developer Satisfaction Responder MUST support the Observation read operation and return a valid, conformant Developer Satisfaction Observation.",
+      "satisfiedBy" : [
+        "http://hl7.org/fhir/uv/dev-satisfaction/TestScript/DEVSATObservationreadvalidatejson",
+        "http://hl7.org/fhir/uv/dev-satisfaction/TestScript/DEVSATObservationreadvalidatexml"
+      ],
+      "source" : [
+        {
+          "display" : "Health Level 7 (HL7) International"
+        }
+      ]
+    },
+    {
+      "key" : "req1-2",
+      "label" : "requirement1-2",
+      "conformance" : [
+        "SHALL"
+      ],
+      "requirement" : "The Developer Satisfaction Requestor MUST support the Observation $get-satisfaction operation.",
+      "source" : [
+        {
+          "display" : "Health Level 7 (HL7) International"
+        }
+      ]
+    },
+    {
+      "key" : "req1-3",
+      "label" : "requirement1-3",
+      "conformance" : [
+        "SHALL"
+      ],
+      "requirement" : "The Developer Satisfaction Responder MUST support the Observation $get-satisfaction operation.",
+      "satisfiedBy" : [
+        "http://hl7.org/fhir/uv/dev-satisfaction/TestScript/DEVSATObservationgetsatjson",
+        "http://hl7.org/fhir/uv/dev-satisfaction/TestScript/DEVSATObservationgetsatxml"
+      ],
+      "source" : [
+        {
+          "display" : "Health Level 7 (HL7) International"
+        }
+      ]
+    }
+  ]
+}
