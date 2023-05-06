@@ -5,7 +5,7 @@
 # │  configuration from now on. You may delete your package.json as it is no longer needed.        │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 
-# ╭─────────────────────────ImplementationGuide-hl7.fhir.us.carin-bb.json──────────────────────────╮
+# ╭─────────────────────ImplementationGuide-hl7.fhir.uv.dev-satisfaction.json──────────────────────╮
 # │  The properties below are used to create the ImplementationGuide resource. For a list of       │
 # │  supported properties, see:                                                                    │
 # │  http://build.fhir.org/ig/HL7/fhir-shorthand/branches/beta/sushi.html#ig-development           │
@@ -28,10 +28,24 @@ description: The Developer Satisfaction Implementation Guide is a fictitious gui
   demonstrate the use of TDD techniques that accelerate the implementation of an IG
 license: CC0-1.0
 fhirVersion: 4.0.1
+dependencies:
+  net.aegis.touchstone.fhir.testing:
+    uri: 'http://touchstone.aegis.net/touchstone/fhir/testing/ImplementationGuide/net.aegis.touchstone.touchstone.fhir.testing'
+    version: 1.6.0
+    id: testing
 parameters:
-  show-inherited-invariants: false
-  apply-jurisdiction: true
-  apply-publisher: true
+  path-resource:
+    - input/resources
+    - fsh-generated/resources
+  show-inherited-invariants: 'false'
+  usage-stats-opt-out: 'true'
+  logging: progress
+  shownav: 'true'
+  active-tables: 'false'
+  apply-contact: 'true'
+  apply-jurisdiction: 'true'
+  apply-publisher: 'true'
+  apply-version: 'true'
   excludettl: 'true'
   excludemap: 'true'
 

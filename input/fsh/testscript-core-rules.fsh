@@ -245,7 +245,19 @@ RuleSet: TSTestOperationResource (opCode, resourceType, format, origin, destinat
   * origin = {origin}
   * params = {params}
 
-RuleSet: TSTestAssert(description, warning, direction, property, value)
+RuleSet: TSTestAssert(description, warning, direction)
+//more flexible assert definition that can be used in less constricted testscript authoring but needs the actual assert to be defined afterwords
+//example: 
+//* insert TSTestAssert("Confirm that the returned HTTP Header Content-Type is present.",false,#response)
+//* test[=].action[=].assert.headerField = "Content-Type"
+//* test[=].action[=].assert.operator = #notEmpty
+
+* test[=].action[+].assert
+  * description = {description}
+  * direction = {direction}
+  * warningOnly = {warning}
+
+RuleSet: TSTestAssertWithProp(description, warning, direction, property, value)
 //more flexible assert definition that can be used in less constricted testscript authoring but needs the actual assert to be defined afterwords
 //example: 
 //* insert TSTestAssert("Confirm that the returned HTTP Header Content-Type is present.",false,#response)
@@ -257,6 +269,3 @@ RuleSet: TSTestAssert(description, warning, direction, property, value)
   * direction = {direction}
   * warningOnly = {warning}
   * {property} = {value}
-
-
-

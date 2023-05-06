@@ -9,6 +9,8 @@
 <artifact id="OperationDefinition/dev-satisfaction-get-satisfaction" key="OperationDefinition-dev-satisfaction-get-satisfaction" name="Get Satisfaction Operation"/>
 <artifact id="Observation/Observation1" key="Observation-Observation1" name="Observation Example 1"/>
 <artifact id="CapabilityStatement/dev-satisfaction-server-r4" key="CapabilityStatement-dev-satisfaction-server-r4" name="R4 Developer Satisfaction Server Capability Statement"/>
+<artifact id="TestScript/DEVSATObservationgetsatjson" key="TestScript-DEVSATObservationgetsatjson" name="testscript-DEVSAT-Observation-get-satisfaction-json"/>
+<artifact id="TestScript/DEVSATObservationgetsatxml" key="TestScript-DEVSATObservationgetsatxml" name="testscript-DEVSAT-Observation-get-satisfaction-xml"/>
 <artifact id="TestScript/DEVSATObservationreadvalidatejson" key="TestScript-DEVSATObservationreadvalidatejson" name="testscript-DEVSAT-Observation-read-validate-json"/>
 <artifact id="TestScript/DEVSATObservationreadvalidatexml" key="TestScript-DEVSATObservationreadvalidatexml" name="testscript-DEVSAT-Observation-read-validate-xml"/>
 <page key="NA" name="(NA)"/>
