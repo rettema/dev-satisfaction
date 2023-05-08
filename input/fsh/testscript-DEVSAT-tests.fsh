@@ -14,8 +14,9 @@ Usage: #definition
 * insert TSMetadata(DEVSATObservationgetsatjson, http://hl7.org/fhir/uv/dev-satisfaction, 2023-04-26, "HL7 FHIR R4 TestScript Observation $get-satisfaction", "Example TestScript to test the Developer Satisfaction Observation $get-satisfaction operation")
 * insert TSOrigin(1)
 * insert TSDestination(1)
-* insert TSTest(GetSatisfactionNoArgs, "Test Developer Satisfaction Observation $get-satisfaction operation with no args on destination server and assert successful returned satisfaction value")
-* insert TSTestOperationResource(#process-message, #Observation, #json, 1, 1, "Observation $get-satisfaction operation with no args", "/Observation/$get-satisfaction")
+* insert TSTest(GetSatisfactionNoArgs, "Test Developer Satisfaction $get-satisfaction operation with no args on destination server and assert successful returned satisfaction value")
+* insert TSTestOperationGlobal(#process-message, #json, 1, 1, "$get-satisfaction operation with no args")
+* test[=].action[=].operation.params = "/$get-satisfaction"
 * insert TSTestAssertWithProp("Confirm that the returned response code is 200 OK.", false, #response, responseCode, "200")
 * insert TSTestAssertWithProp("Confirm that the returned response payload is a Parameters resource.", false, #response, resource, #Parameters)
 * insert TSTestAssert("Confirm that the returned Parameters contains a measurement parameter.", false, #response)
@@ -27,8 +28,9 @@ Usage: #definition
 * insert TSMetadata(DEVSATObservationgetsatxml, http://hl7.org/fhir/uv/dev-satisfaction, 2023-04-26, "HL7 FHIR R4 TestScript Observation $get-satisfaction", "Example TestScript to test the Developer Satisfaction Observation $get-satisfaction operation")
 * insert TSOrigin(1)
 * insert TSDestination(1)
-* insert TSTest(GetSatisfactionNoArgs, "Test Developer Satisfaction Observation $get-satisfaction operation with no args on destination server and assert successful returned satisfaction value")
-* insert TSTestOperationResource(#process-message, #Observation, #xml, 1, 1, "Observation $get-satisfaction operation with no args", "/Observation/$get-satisfaction")
+* insert TSTest(GetSatisfactionNoArgs, "Test Developer Satisfaction $get-satisfaction operation with no args on destination server and assert successful returned satisfaction value")
+* insert TSTestOperationGlobal(#process-message, #xml, 1, 1, "$get-satisfaction operation with no args")
+* test[=].action[=].operation.params = "/$get-satisfaction"
 * insert TSTestAssertWithProp("Confirm that the returned response code is 200 OK.", false, #response, responseCode, "200")
 * insert TSTestAssertWithProp("Confirm that the returned response payload is a Parameters resource.", false, #response, resource, #Parameters)
 * insert TSTestAssert("Confirm that the returned Parameters contains a measurement parameter.", false, #response)

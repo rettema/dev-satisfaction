@@ -5,7 +5,6 @@ Description: "Observation Example 1"
 Usage: #example
 * meta.lastUpdated = "2023-01-19T09:48:01-04:00"
 * meta.profile[+] = Canonical(dev-satisfaction-observation)
-* language = #en-US
 * identifier.system = "https://example.com/fhir/satisfactionidentifier"
 * identifier.value = "99934500123"
 * status = #final
