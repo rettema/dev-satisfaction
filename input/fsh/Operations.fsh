@@ -7,11 +7,10 @@ Description:   "This operation is used to get the satisfaction measurement based
 * name          = "DevSatisfactionGetSatisfaction"
 * description   = "This operation is used to get the satisfaction measurement based on the stored satisfaction observations."
 * insert OperationCommon
-* system        = false
-* type          = true
+* system        = true
+* type          = false
 * instance      = false
 * code          = #get-satisfaction
-* resource[0]   = #Observation
 
 * parameter[+].name          = #search
 * parameter[=].type          = #string
