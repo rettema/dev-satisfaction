@@ -1,3 +1,6 @@
+Alias: $loinc = http://loinc.org
+Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
+
 RuleSet: ResourceJurisdiction
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 
