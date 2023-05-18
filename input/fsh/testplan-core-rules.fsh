@@ -5,7 +5,7 @@
 RuleSet: TPMetadata (id, baseUrl, date, title, description)
 //sets basic TestPlan metadata based on common fixed values in testplan authoring
 //example:
-//* insert TPMetadata(testplan-example,http://hl7.org/fhir,2023-04-21,"HL7 FHIR R5 (v5.0.0) TestPlan Example","Example TestPlan for profile validation")
+//* insert TPMetadata(testplan-example,http://hl7.org/fhir,2023-05-17,"HL7 FHIR R5 (v5.0.0) TestPlan Example","Example TestPlan for profile validation")
 
 * id = "{id}"
 * url = "{baseUrl}/TestPlan/{id}"

@@ -1,16 +1,19 @@
 
-Satisfaction typically involves two actors:
+Satisfaction involves the following actors:
 
-Any FHIR application may support the Satisfaction Process. In this documentation:
+Note, any FHIR application may support the Satisfaction Process.
 
 <a name="server"></a>
-### Server
+### Servers
 
-**Server** refers to the FHIR application or applications acting as the satisfaction provider. This includes the responsibility of generating Satisfaction measures based on one or more Satisfaction profiled `Observation` resources.
+When generating Satisfaction measures, this guide does not prescribe the underlying satification algorithms the FHIR server implements. The expected server behavior can be a simple aggregation to a more complex scaling. This specification makes no recommendations towards the internal architecture of server implementations.
 
-Note that when generating Satisfaction measures, this guide does not prescribe the underlying satification algorithms the FHIR server implements. The expected server behavior can be a simple aggregation to a more complex scaling. This specification makes no recommendations towards the internal architecture of server implementations.
+* [Developer Satisfaction Responder](ActorDefinition-dev-satisfaction-responder.html)
 
 <a name="client"></a>
-### Client
+### Clients
 
-**Client** refers to the FHIR application or applications acting as the satisfaction subscriber. This includes the responsibilities of acting as a FHIR client (to create the Satisfaction profiled `Observation` resources) and receiving the generated Satisfaction measures.
+These actors include the responsibilities of acting as a FHIR client (to create the Satisfaction profiled `Observation` resources) and receiving the generated Satisfaction measures.
+
+* [Developer Satisfaction Provider](ActorDefinition-dev-satisfaction-provider.html)
+* [Developer Satisfaction Requestor](ActorDefinition-dev-satisfaction-requestor.html)

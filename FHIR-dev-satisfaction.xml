@@ -6,6 +6,7 @@
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
 <artifact id="StructureDefinition/dev-satisfaction-observation" key="StructureDefinition-dev-satisfaction-observation" name="Developer Satisfaction Observation Profile - Required Data"/>
+<artifact id="ActorDefinition/dev-satisfaction-provider" key="ActorDefinition-dev-satisfaction-provider" name="Developer Satisfaction Provider"/>
 <artifact id="ActorDefinition/dev-satisfaction-requestor" key="ActorDefinition-dev-satisfaction-requestor" name="Developer Satisfaction Requestor"/>
 <artifact id="Requirements/dev-satisfaction-req1" key="Requirements-dev-satisfaction-req1" name="Developer Satisfaction Requirements for Requestor and Responder"/>
 <artifact id="ActorDefinition/dev-satisfaction-responder" key="ActorDefinition-dev-satisfaction-responder" name="Developer Satisfaction Responder"/>
@@ -31,5 +32,4 @@
 <page key="specification" name="Specification"/>
 <page key="toc" name="Table of Contents"/>
 <page key="testing" name="Testing"/>
-<page key="workflow" name="Workflow"/>
 </specification>

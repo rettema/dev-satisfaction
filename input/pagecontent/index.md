@@ -1,5 +1,3 @@
-**Disclaimer:** The Developer Satisfaction Implementation Guide is a fictitious guide used to demonstrate the use of TDD techniques that accelerate the implementation of an IG.
-
 The Developer Satisfaction Implementation Guide demonstrates the Developer Satisfaction process that can be leveraged in FHIR IG authoring and subsequent implementation efforts.
 
 ### About This Guide
@@ -12,18 +10,23 @@ The goal of publishing this guide is to define a standard method of a Developer 
 
 See
 * [https://www.vocabulary.com/dictionary/satisfaction](https://www.vocabulary.com/dictionary/satisfaction)
-* [\[I Can't Get No\] Satisfaction](https://www.youtube.com/watch?v=ROAKlnaMuRw&pp=ygUbcm9sbGluZyBzdG9uZXMgc2F0aXNmYWN0aW9u)
+
+{% include img.html img="satisfaction_rolling_stones.jpg" %}
 
 ### Authors and Contributors
 
 | **Role** | **Name** | **Organization** |
 | -------- | -------- | ---------------- |
 | Author | Richard Ettema | AEGIS.net, Inc. |
-| Contributor | Jeff Hellman | AEGIS.net, Inc. |
+| Author | Jeff Hellman | AEGIS.net, Inc. |
 {: .grid }
 
 The authors gratefully acknowledge the many contributions from numerous users and facilitators who helped shape, mature, debug, and advance Developer Satisfaction:
 
-List here
+| **Role** | **Name** | **Organization** |
+| -------- | -------- | ---------------- |
+| Contributor | Reinhard Egelkraut | HL7 Austria |
+| Contributor | Oliver Egger | ahdis |
+{: .grid }
 
 The authors apologize if they have omitted any contributor from this list.

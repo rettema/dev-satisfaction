@@ -3,7 +3,7 @@ InstanceOf: dev-satisfaction-observation
 Title: "Observation Example 1"
 Description: "Observation Example 1"
 Usage: #example
-* meta.lastUpdated = "2023-04-21T09:48:01-04:00"
+* meta.lastUpdated = "2023-05-17T09:48:01-04:00"
 * meta.profile[+] = Canonical(dev-satisfaction-observation)
 * identifier.system = "https://example.com/fhir/satisfactionidentifier"
 * identifier.value = "99934500123"

@@ -12,7 +12,7 @@ RuleSet: ResourceCommonR5
 RuleSet:       OperationCommon
 * jurisdiction        = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * status              = #active
-* date                = "2023-04-21"
+* date                = "2023-05-17"
 * publisher           = "AEGIS.net, Inc."
 // * contact[0].telecom[0].system = #url
 // * contact[0].telecom[0].value  = "https://hl7.org/Special/committees/fiwg/index.cfm"
