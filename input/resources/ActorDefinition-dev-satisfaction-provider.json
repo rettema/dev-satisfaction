@@ -1,0 +1,25 @@
+{
+  "resourceType" : "ActorDefinition",
+  "id" : "dev-satisfaction-provider",
+  "url" : "http://hl7.org/fhir/uv/dev-satisfaction/ActorDefinition/dev-satisfaction-provider",
+  "name" : "DevSatisfactionProvider",
+  "title" : "Developer Satisfaction Provider",
+  "status" : "draft",
+  "date": "2023-05-17",
+  "publisher": "Health Level 7 (HL7) International",
+  "contact": [
+    {
+      "name": "FHIR project team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org/fhir"
+        }
+      ]
+    }
+  ],
+  "description" : "Developer Satisfaction Provider actor",
+  "copyright": "(c) Health Level 7 (HL7) International 2023",
+  "type" : "system",
+  "documentation" : "An application or product that generates developer satisfaction measurement data and sends that data to the Developer Satisfaction Responder. This can be thought of as the client sending a create interaction of an observed satisfaction measurement to the target server."
+}

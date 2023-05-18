@@ -1,30 +1,15 @@
-<a name="actors"></a>
-### Actors
 
-<p>The following testing actors are part of the Developer Satisfaction IG:</p>
+<p>This Developer Satisfaction IG represents the potential use of the new and existing FHIR Testing conformance resources.</p>
 
-<ul>
-<li><strong>Developer Satisfaction Provider</strong>: An application that generates developer satisfaction measurement data and sends that data to the <strong>Developer Satisfaction Responder</strong>. This can be thought of as the client sending a create interaction of observed satisfaction measurement to the target server.</li>
-<li><strong>Developer Satisfaction Requestor</strong>: An application that initiates a request to  get satisfaction measurement aggregated data. This can be thought of as the client in a client-server interaction.</li>
-<li><strong>Developer Satisfaction Responder</strong>: A product that responds to the get satisfaction measurement request providing aggregated data. This can be thought of as the server in a client-server interaction.</li>
-</ul>
+### Existing (R4)
 
-<a name="conformance-verbs"></a>
-### Conformance Verbs
+* <strong>[TestScript](http://hl7.org/fhir/R4/testscript.html)</strong>  A structured set of tests against a FHIR server or client implementation
 
-<p>The conformance verbs - <strong>SHALL, SHOULD, MAY</strong> - used in this guide are defined in <a style="font-size: 14px;" href="http://hl7.org/fhir/R4/conformance-rules.html">FHIR Conformance Rules.</a></p>
+### New (R5)
 
-<a name="must-support"></a>
-### Must Support
+* <strong>[ActorDefinition](http://hl7.org/fhir/R5/actordefinition.html)</strong>  Describes an actor - a human or an application that plays a role in data exchange
+* <strong>[Requirements](http://hl7.org/fhir/R5/requirements.html)</strong>  A set of requirements - a list of features or behaviors of designed systems that are necessary to achieve organizational or regulatory goals
+* <strong>[TestPlan](http://hl7.org/fhir/R5/testplan.html)</strong>  A plan for executing testing on an artifact or specifications
 
-<p>Please refer to the <a href="conformance.html#must-support">Specification - Conformance - Must Support</a> section on implementing the Must Support Developer Satisfaction IG requirements.</p>
-
-<a name="cs-tests"></a>
-### Tests from Capability Statement
-
-<p>TBD</p>
-
-<a name="test-cases"></a>
-### Test Cases
-
-<p>TBD</p>
+<p></p>
+<p>This page is a placeholder for additional IG testing detailed information.</p>

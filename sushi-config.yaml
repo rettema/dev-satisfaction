@@ -38,8 +38,10 @@ parameters:
   path-resource:
     - input/resources
     - fsh-generated/resources
+  path-pages:
+    - input/pagecontent
+    - fsh-generated/includes
   show-inherited-invariants: 'false'
-  usage-stats-opt-out: 'true'
   logging: progress
   shownav: 'true'
   active-tables: 'false'
@@ -47,8 +49,10 @@ parameters:
   apply-jurisdiction: 'true'
   apply-publisher: 'true'
   apply-version: 'true'
+  usage-stats-opt-out: 'true'
   excludettl: 'true'
   excludemap: 'true'
+  validation: 'allow-any-extensions'
 
 copyrightYear: 2023+
 releaseLabel: ci-build
@@ -63,7 +67,6 @@ menu:
   Specification:
     Actors: actors.html
     Satisfaction Components: components.html
-    Workflow: workflow.html
     Conformance: conformance.html
     Handling Errors: errors.html
   Safety and Security: safety_security.html
@@ -88,9 +91,7 @@ pages:
     actors.md:
       title: Actors
     components.md:
-      title: Satisfaction Components 
-    workflow.md:
-      title: Workflow
+      title: Satisfaction Components
     conformance.md:
       title: Conformance
     errors.md:

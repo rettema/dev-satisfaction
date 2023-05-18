@@ -21,5 +21,5 @@
   "description" : "Developer Satisfaction Requestor actor",
   "copyright": "(c) Health Level 7 (HL7) International 2023",
   "type" : "system",
-  "documentation" : "An application or product that initiates a data access request conformant to the Developer Satisfaction IG. This can be thought of as the client in a client-server interaction."
+  "documentation" : "An application or product that initiates a data access request conformant to the Developer Satisfaction IG to receive satisfaction measurement aggregated data. This can be thought of as the client in a client-server interaction."
 }
