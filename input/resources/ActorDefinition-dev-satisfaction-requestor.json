@@ -1,0 +1,25 @@
+{
+  "resourceType" : "ActorDefinition",
+  "id" : "dev-satisfaction-requestor",
+  "url" : "http://hl7.org/fhir/uv/dev-satisfaction/ActorDefinition/dev-satisfaction-requestor",
+  "name" : "DevSatisfactionRequestor",
+  "title" : "Developer Satisfaction Requestor",
+  "status" : "draft",
+  "date": "2023-05-17",
+  "publisher": "Health Level 7 (HL7) International",
+  "contact": [
+    {
+      "name": "FHIR project team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org/fhir"
+        }
+      ]
+    }
+  ],
+  "description" : "Developer Satisfaction Requestor actor",
+  "copyright": "(c) Health Level 7 (HL7) International 2023",
+  "type" : "system",
+  "documentation" : "An application or product that initiates a data access request conformant to the Developer Satisfaction IG. This can be thought of as the client in a client-server interaction."
+}

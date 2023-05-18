@@ -4,11 +4,7 @@ This page defines how CapabilityStatements are used and the expectations for man
 Note that the conformance verbs - SHALL, SHOULD, MAY - used in this guide are defined by the [FHIR Conformance Rules](http://hl7.org/fhir/conformance-rules.html).
 
 ### Conformance in FHIR R4
-In order to claim conformance with this guide, a server:
-* SHALL support the `Observation` resource (read/write).
-* SHALL support the `$get-satisfaction` operation.
-
-Note that in FHIR R4, there is no representation of Subscription Topics.  Detailed discussion can be found on the [Satisfaction Components](components.html) page.
+In order to claim conformance with this guide, a client and server implementation must adhere to the defined [Requirements](artifacts.html#requirements-formal-requirements).
 
 <a name="conformance-artifacts"></a>
 #### Conformance Artifacts

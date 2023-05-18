@@ -2,7 +2,7 @@ Alias: $exp = http://hl7.org/fhir/StructureDefinition/capabilitystatement-expect
 
 RuleSet: CapabilityCommon
 * status              = #active
-* date                = "2023-01-19"
+* date                = "2023-05-17"
 * publisher           = "AEGIS.net, Inc."
 // * contact[0].telecom[0].system = #url
 // * contact[0].telecom[0].value  = "https://hl7.org/Special/committees/fiwg/index.cfm"
