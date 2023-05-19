@@ -5,4 +5,5 @@ This table provides a list of all the versions of the Developer Satisfaction Imp
 
 |Date|Version|FHIRVersion|Description|
 |---|---|---|---|
+|[May 2023](index.html)|0.2.0|FHIR R4 (v4.0.1)|Pre-release 2 with modified content|
 |[Jan 2023](index.html)|0.1.0|FHIR R4 (v4.0.1)|Pre-release with initial content|

@@ -17,7 +17,7 @@ RuleSet:       OperationCommon
 // * contact[0].telecom[0].system = #url
 // * contact[0].telecom[0].value  = "https://hl7.org/Special/committees/fiwg/index.cfm"
 * affectsState        = false
-* version             = "0.1.0"
+* version             = "0.2.0"
 * kind                = #operation
 * extension[0].url          = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
 * extension[0].valueInteger = 0

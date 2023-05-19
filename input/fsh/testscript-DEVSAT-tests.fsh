@@ -1,3 +1,13 @@
+Instance: testscript-DEVSAT-Observation-dynamic-read-validate-json
+InstanceOf: TestScript
+Usage: #definition
+* insert DEVSAT-profile-dynamic-read-validate-test(Observation, DEVSATObservationdynamicreadvalidatejson, 2023-05-17, #json, DEVSATObservationProfile, "http://hl7.org/fhir/uv/dev-satisfaction/StructureDefinition/dev-satisfaction-observation", DEVSAT-Observation)
+
+Instance: testscript-DEVSAT-Observation-dynamic-read-validate-xml
+InstanceOf: TestScript
+Usage: #definition
+* insert DEVSAT-profile-dynamic-read-validate-test(Observation, DEVSATObservationdynamicreadvalidatexml, 2023-05-17, #xml, DEVSATObservationProfile, "http://hl7.org/fhir/uv/dev-satisfaction/StructureDefinition/dev-satisfaction-observation", DEVSAT-Observation)
+
 Instance: testscript-DEVSAT-Observation-read-validate-json
 InstanceOf: TestScript
 Usage: #definition
@@ -23,6 +33,8 @@ Usage: #definition
 * insert TSTestAssertWithProp("Confirm that the returned response payload is a Parameters resource.", false, #response, resource, #Parameters)
 * insert TSTestAssert("Confirm that the returned Parameters contains a measurement parameter.", false, #response)
 * test[=].action[=].assert.expression = "Parameters.parameter.where(name = 'measurement').exists()"
+* insert TSTestAssert("Confirm that the returned Parameters contains an interpretation parameter.", false, #response)
+* test[=].action[=].assert.expression = "Parameters.parameter.where(name = 'interpretation').exists()"
 
 Instance: testscript-DEVSAT-Observation-get-satisfaction-xml
 InstanceOf: TestScript
@@ -39,3 +51,5 @@ Usage: #definition
 * insert TSTestAssertWithProp("Confirm that the returned response payload is a Parameters resource.", false, #response, resource, #Parameters)
 * insert TSTestAssert("Confirm that the returned Parameters contains a measurement parameter.", false, #response)
 * test[=].action[=].assert.expression = "Parameters.parameter.where(name = 'measurement').exists()"
+* insert TSTestAssert("Confirm that the returned Parameters contains an interpretation parameter.", false, #response)
+* test[=].action[=].assert.expression = "Parameters.parameter.where(name = 'interpretation').exists()"

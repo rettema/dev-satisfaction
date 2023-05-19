@@ -64,6 +64,11 @@ RuleSet: SupportOperation (name, canonical, expectation)
 * rest.resource[=].operation[=].extension[0].url = $exp
 * rest.resource[=].operation[=].extension[0].valueCode = {expectation}
 
+RuleSet: GlobalOperationNoExp (name, canonical)
+// This rule set defines a global operation.
+* rest.operation[+].name = "{name}"
+* rest.operation[=].definition = "{canonical}"
+
 Instance:      CapabilitySatisfactionServerR4
 InstanceOf:    CapabilityStatement
 Usage:         #definition
@@ -76,6 +81,9 @@ Description:   "CapabilityStatement describing the minimal required capabilities
 * description   = "CapabilityStatement describing the required and optional capabilities of a FHIR Server supporting the Developer Satisfaction functionality."
 * implementationGuide = "http://hl7.org/fhir/uv/dev-satisfaction/ImplementationGuide/hl7.fhir.uv.dev-satisfaction"
 * insert CapabilityCommon
+
+* implementationGuide = "http://hl7.org/fhir/uv/dev-satisfaction/ImplementationGuide/hl7.fhir.uv.dev-satisfaction"
+
 * rest[+].mode  = #server
 * rest[=].mode.extension[http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation].valueCode = #SHALL
 
@@ -85,4 +93,5 @@ Description:   "CapabilityStatement describing the minimal required capabilities
 * insert SupportInteraction(#create, #SHALL)
 * insert SupportInteraction(#update, #SHOULD)
 * insert SupportInteraction(#delete, #SHOULD)
-* insert SupportOperation($get-satisfaction, http://hl7.org/fhir/uv/dev-satisfaction/OperationDefinition/dev-satisfaction-get-satisfaction, #SHALL)
+
+* insert GlobalOperationNoExp(get-satisfaction, http://hl7.org/fhir/uv/dev-satisfaction/OperationDefinition/dev-satisfaction-get-satisfaction)

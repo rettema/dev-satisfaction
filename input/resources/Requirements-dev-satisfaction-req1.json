@@ -49,6 +49,10 @@
         "SHALL"
       ],
       "requirement" : "The Developer Satisfaction Requestor MUST support the Observation $get-satisfaction operation.",
+      "satisfiedBy" : [
+        "http://hl7.org/fhir/uv/dev-satisfaction/TestScript/DEVSATObservationdynamicreadvalidatejson",
+        "http://hl7.org/fhir/uv/dev-satisfaction/TestScript/DEVSATObservationdynamicreadvalidatexml"
+      ],
       "source" : [
         {
           "display" : "Health Level 7 (HL7) International"

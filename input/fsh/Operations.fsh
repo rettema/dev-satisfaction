@@ -25,3 +25,10 @@ Description:   "This operation is used to get the satisfaction measurement based
 * parameter[=].min           = 1
 * parameter[=].max           = "1"
 * parameter[=].documentation = "The computed satisfaction measurement value."
+
+* parameter[+].name          = #interpretation
+* parameter[=].type          = #string
+* parameter[=].use           = #out
+* parameter[=].min           = 1
+* parameter[=].max           = "1"
+* parameter[=].documentation = "An interpretation description of the satisfaction measurement value."

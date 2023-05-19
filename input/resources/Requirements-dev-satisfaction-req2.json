@@ -1,0 +1,41 @@
+{
+  "resourceType" : "Requirements",
+  "id" : "dev-satisfaction-req2",
+  "url": "http://hl7.org/fhir/uv/dev-satisfaction/Requirements/dev-satisfaction-req2",
+  "name": "DevSatisfactionGetReq2",
+  "title": "Developer Satisfaction Requirements for Responder CapabilitiesStatement conformance",
+  "status" : "draft",
+  "date": "2023-05-17",
+  "publisher": "Health Level 7 (HL7) International",
+  "contact": [
+    {
+      "name": "FHIR project team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org/fhir"
+        }
+      ]
+    }
+  ],
+  "description" : "Developer Satisfaction Requirements for Responder CapabilitiesStatement conformance",
+  "copyright": "(c) Health Level 7 (HL7) International 2023",
+  "actor" : [
+    "http://hl7.org/fhir/uv/dev-satisfaction/ActorDefinition/dev-satisfaction-responder"
+  ],
+  "statement" : [
+    {
+      "key" : "req2-1",
+      "label" : "requirement2-1",
+      "conformance" : [
+        "SHALL"
+      ],
+      "requirement" : "The Developer Satisfaction Responder MUST support the capabilities endpoint and return a CapabilitiesStatement instance conformant to the Developer Satisfaction IG.",
+      "source" : [
+        {
+          "display" : "Health Level 7 (HL7) International"
+        }
+      ]
+    }
+  ]
+}

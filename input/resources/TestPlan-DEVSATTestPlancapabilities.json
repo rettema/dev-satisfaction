@@ -1,0 +1,74 @@
+{
+  "resourceType": "TestPlan",
+  "id": "DEVSATTestPlancapabilities",
+  "url": "http://hl7.org/fhir/uv/dev-satisfaction/TestPlan/DEVSATTestPlancapabilities",
+  "name": "DEVSATTestPlancapabilities",
+  "title": "HL7 FHIR R4 TestPlan Capabilities",
+  "date": "2023-05-17",
+  "description": "Example TestPlan to verify a FHIR server's CapabilityStatement conformance to the Developer Satisfaction IG",
+  "status": "active",
+  "publisher": "Health Level 7 (HL7) International",
+  "contact": [
+    {
+      "name": "FHIR project team",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org/fhir"
+        }
+      ]
+    }
+  ],
+  "copyright": "(c) Health Level 7 (HL7) International 2023",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://hl7.org/fhir/testscript-scope-phase-codes",
+          "code": "integration"
+        }
+      ]
+    }
+  ],
+  "scope": [
+    {
+      "reference": "http://hl7.org/fhir/uv/dev-satisfaction/CapabilityStatement/dev-satisfaction-server-r4"
+    }
+  ],
+  "testTools": "[Touchstone FHIR Testing Platform]: https://touchstone.com ",
+  "testCase": [
+    {
+      "sequence": 1,
+      "testRun": [
+        {
+          "narrative": "Get the FHIR Server's JSON formatted CapabilityStatement and validate against the Dev Satisfaction IG",
+          "script": {
+            "language": {
+              "coding": [
+                {
+                  "system": "http://example.org/fhir/testplan/language",
+                  "code": "testscript"
+                }
+              ]
+            },
+            "sourceString": "TBD"
+          }
+        },
+        {
+          "narrative": "Get the FHIR Server's XML formatted CapabilityStatement and validate against the Dev Satisfaction IG",
+          "script": {
+            "language": {
+              "coding": [
+                {
+                  "system": "http://example.org/fhir/testplan/language",
+                  "code": "testscript"
+                }
+              ]
+            },
+            "sourceString": "TBD"
+          }
+        }
+      ]
+    }
+  ]
+}

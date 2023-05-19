@@ -1,4 +1,4 @@
-Extension: testing-scope
+Extension: TestingScope
 Id: testing-scope
 Title: "Testing Scope Canonical Value"
 Description: "The canonical value of the conformance resource that is tested."

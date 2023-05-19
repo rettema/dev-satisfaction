@@ -1,10 +1,10 @@
 {
     "package-id": "hl7.fhir.uv.dev-satisfaction",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "path": "http://hl7.org/fhir/uv/dev-satisfaction/STU1",
     "milestone": true,
     "status": "trial-use",
     "sequence": "STU 1",
-    "desc": "Developer Satisfaction Implementation Guide Release 0.1.0 - UV Realm STU1",
+    "desc": "Developer Satisfaction Implementation Guide Release 0.2.0 - UV Realm STU1",
     "title": "Developer Satisfaction Implementation Guide"
 }
