@@ -18,7 +18,7 @@ See
 | **Role** | **Name** | **Organization** |
 | -------- | -------- | ---------------- |
 | Author | Richard Ettema | AEGIS.net, Inc. |
-| Author | Jeff Hellman | AEGIS.net, Inc. |
+| Author | Jeff Helman | AEGIS.net, Inc. |
 {: .grid }
 
 The authors gratefully acknowledge the many contributions from numerous users and facilitators who helped shape, mature, debug, and advance Developer Satisfaction:
