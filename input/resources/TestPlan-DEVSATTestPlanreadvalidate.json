@@ -33,9 +33,6 @@
   "scope": [
     {
       "reference": "http://hl7.org/fhir/uv/dev-satisfaction/StructureDefinition/dev-satisfaction-observation"
-    },
-    {
-      "reference": "http://hl7.org/fhir/uv/dev-satisfaction/OperationDefinition/dev-satisfaction-get-satisfaction"
     }
   ],
   "testTools": "[Touchstone FHIR Testing Platform]: https://touchstone.com ",

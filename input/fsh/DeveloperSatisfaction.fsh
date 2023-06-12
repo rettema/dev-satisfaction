@@ -1,3 +1,15 @@
+Profile:        DEVSATGoal
+Parent:         Goal
+Id:             dev-satisfaction-goal
+Title:          "Developer Satisfaction Goal Profile - Required Data"
+Description:    "Profile for defining the required data for a Developer Satisfaction Goal."
+
+* category = $goal-category#behavioral
+* start[x] only date
+* target.measure = $loinc#34786-4
+* target.detail[x] only Quantity
+* target.due[x] only date
+
 Profile:        DEVSATObservation
 Parent:         Observation
 Id:             dev-satisfaction-observation

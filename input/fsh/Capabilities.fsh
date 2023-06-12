@@ -87,6 +87,13 @@ Description:   "CapabilityStatement describing the minimal required capabilities
 * rest[+].mode  = #server
 * rest[=].mode.extension[http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation].valueCode = #SHALL
 
+* insert SupportResource(Goal, #SHALL)
+* insert SupportProfile(http://hl7.org/fhir/uv/dev-satisfaction/StructureDefinition/dev-satisfaction-goal, #SHALL)
+* insert SupportInteraction(#read, #SHALL)
+* insert SupportInteraction(#create, #SHALL)
+* insert SupportInteraction(#update, #SHOULD)
+* insert SupportInteraction(#delete, #SHOULD)
+
 * insert SupportResource(Observation, #SHALL)
 * insert SupportProfile(http://hl7.org/fhir/uv/dev-satisfaction/StructureDefinition/dev-satisfaction-observation, #SHALL)
 * insert SupportInteraction(#read, #SHALL)

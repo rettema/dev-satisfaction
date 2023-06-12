@@ -1,4 +1,5 @@
 Alias: $loinc = http://loinc.org
+Alias: $goal-category = http://terminology.hl7.org/CodeSystem/goal-category
 Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
 
 RuleSet: ResourceJurisdiction
@@ -12,12 +13,12 @@ RuleSet: ResourceCommonR4
 RuleSet:       OperationCommon
 * jurisdiction        = http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * status              = #active
-* date                = "2023-01-19"
+* date                = "2023-06-12"
 * publisher           = "AEGIS.net, Inc."
 // * contact[0].telecom[0].system = #url
 // * contact[0].telecom[0].value  = "https://hl7.org/Special/committees/fiwg/index.cfm"
 * affectsState        = false
-* version             = "0.2.0"
+* version             = "0.3.0"
 * kind                = #operation
 * extension[0].url          = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
 * extension[0].valueInteger = 0
