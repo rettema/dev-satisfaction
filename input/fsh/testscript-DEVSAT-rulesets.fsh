@@ -1,5 +1,5 @@
 RuleSet: DEVSAT-profile-dynamic-read-validate-test(resource, instance_name, date, return_type, profile_id, profile_url, profile_description)
-* insert TSMetadata({instance_name}, http://hl7.org/fhir/uv/dev-satisfaction, {date}, "HL7 FHIR R4 TestScript Read Validate {profile_description}", "Example TestScript to test {profile_description} resource read and profile validation")
+* insert TSMetadata({instance_name}, http://hl7.org/fhir/uv/dev-satisfaction, {date}, "HL7 FHIR R4 TestScript Read Validate {profile_description} {return_type}", "Example TestScript to test {profile_description} resource read and profile validation using {return_type} format")
 * insert TSOrigin(1)
 * insert TSDestination(1)
 * insert TSProfile({profile_id}, {profile_url})
@@ -11,7 +11,7 @@ RuleSet: DEVSAT-profile-dynamic-read-validate-test(resource, instance_name, date
 * insert TSTestAssertWithProp("Confirm that the returned resource conforms to the specified profile.", false, #response, validateProfileId, "{profile_id}")
 
 RuleSet: DEVSAT-profile-read-validate-test(resource, resource_id, instance_name, date, return_type, profile_id, profile_url, profile_description)
-* insert TSMetadata({instance_name}, http://hl7.org/fhir/uv/dev-satisfaction, {date}, "HL7 FHIR R4 TestScript Read Validate {profile_description}", "Example TestScript to test {profile_description} resource read and profile validation")
+* insert TSMetadata({instance_name}, http://hl7.org/fhir/uv/dev-satisfaction, {date}, "HL7 FHIR R4 TestScript Read Validate {profile_description} {return_type}", "Example TestScript to test {profile_description} resource read and profile validation using {return_type} format")
 * insert TSOrigin(1)
 * insert TSDestination(1)
 * insert TSProfile({profile_id}, {profile_url})
