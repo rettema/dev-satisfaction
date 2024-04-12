@@ -1,19 +1,19 @@
 
-Satisfaction involves the following actors:
+Developer Satisfaction involves the following actors:
 
-Note, any FHIR application may support the Satisfaction Process.
+Note, any FHIR application may support the Developer Satisfaction operations and processes.
 
-<a name="server"></a>
-### Servers
+<a name="provider"></a>
+### Developer Satisfaction Provider
 
-When generating Satisfaction measures, this guide does not prescribe the underlying satification algorithms the FHIR server implements. The expected server behavior can be a simple aggregation to a more complex scaling. This specification makes no recommendations towards the internal architecture of server implementations.
+An application or product that generates developer satisfaction measurement data and sends that data to the Developer Satisfaction Responder. This can be thought of as the client sending a create interaction of an observed satisfaction measurement to the target server.
 
-* [Developer Satisfaction Responder](ActorDefinition-dev-satisfaction-responder.html)
+<a name="requestor"></a>
+### Developer Satisfaction Requestor
 
-<a name="client"></a>
-### Clients
+An application or product that initiates a data access request conformant to the Developer Satisfaction IG to receive satisfaction measurement aggregated data. This can be thought of as the client in a client-server interaction.
 
-These actors include the responsibilities of acting as a FHIR client (to create the Satisfaction profiled `Observation` resources) and receiving the generated Satisfaction measures.
+<a name="responder"></a>
+### Developer Satisfaction Responder
 
-* [Developer Satisfaction Provider](ActorDefinition-dev-satisfaction-provider.html)
-* [Developer Satisfaction Requestor](ActorDefinition-dev-satisfaction-requestor.html)
+An application or product that responds to a data access request conformant to the Developer Satisfaction IG sending satisfaction measurement aggregated data. This can be thought of as the server in a client-server interaction.

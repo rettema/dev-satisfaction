@@ -5,20 +5,20 @@
 # │  configuration from now on. You may delete your package.json as it is no longer needed.        │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 
-# ╭─────────────────────ImplementationGuide-hl7.fhir.uv.dev-satisfaction.json──────────────────────╮
+# ╭──────────────ImplementationGuide-net.aegis.touchstone.fhir.dev-satisfaction.json───────────────╮
 # │  The properties below are used to create the ImplementationGuide resource. For a list of       │
 # │  supported properties, see:                                                                    │
 # │  http://build.fhir.org/ig/HL7/fhir-shorthand/branches/beta/sushi.html#ig-development           │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: hl7.fhir.uv.dev-satisfaction
-canonical: http://hl7.org/fhir/uv/dev-satisfaction
+id: net.aegis.touchstone.fhir.dev-satisfaction
+canonical: http://touchstone.aegis.net/touchstone/fhir/dev-satisfaction
 version: 0.1.0
 name: DeveloperSatisfaction
 title: Developer Satisfaction
-status: draft
+status: active
 publisher:
-  name: HL7 FHIR Infrastructure WG
-  url: https://hl7.org/Special/committees/fiwg
+  name: 'AEGIS.net, Inc.'
+  url: https://www.aegis.net
 contact:
   - name: Richard Ettema
     telecom:
@@ -27,7 +27,12 @@ contact:
 description: The Developer Satisfaction Implementation Guide is a fictitious guide used to
   demonstrate the use of TDD techniques that accelerate the implementation of an IG
 license: CC0-1.0
-fhirVersion: 5.0.0
+fhirVersion: 4.0.1
+dependencies:
+  net.aegis.touchstone.fhir.testing:
+    uri: 'http://touchstone.aegis.net/touchstone/fhir/testing/ImplementationGuide/net.aegis.touchstone.touchstone.fhir.testing'
+    version: 2.0.0
+    id: testing
 parameters:
   path-resource:
     - input/resources
@@ -48,7 +53,7 @@ parameters:
   excludemap: 'true'
   validation: 'allow-any-extensions'
 
-copyrightYear: 2023+
+copyrightYear: 2024+
 releaseLabel: ci-build
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 
@@ -58,7 +63,7 @@ jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 menu:
   Contents: toc.html
   Home: index.html
-  Specification:
+  Guidance:
     Actors: actors.html
     Satisfaction Components: components.html
     Conformance: conformance.html
@@ -66,12 +71,9 @@ menu:
   Safety and Security: safety_security.html
   Testing: testing.html
   Artifacts:
-    Actor Definitions: artifacts.html#requirements-actor-definitions
-    Formal Requirements: artifacts.html#requirements-formal-requirements
     Capability Statements: artifacts.html#behavior-capability-statements
     Operations: artifacts.html#behavior-operation-definitions
     Profiles: artifacts.html#structures-resource-profiles
-    TestPlans: artifacts.html#testing-artifacts-testplans
     TestScripts: artifacts.html#testing-artifacts-testscripts
     Examples: artifacts.html#example-example-instances
   Support:
@@ -80,8 +82,8 @@ menu:
 pages:
   index.md:
     title: Home
-  specification.md:
-    title: Specification
+  guidance.md:
+    title: Guidance
     actors.md:
       title: Actors
     components.md:
@@ -93,7 +95,7 @@ pages:
   safety_security.md:
     title: Safety and Security
   testing.md:
-    title: Testing
+    title: Testing Conformance
   downloads.md:
     title: Downloads
   history.md:
@@ -104,7 +106,17 @@ pages:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 
 resources:
+  Goal/Goal1:
+    name: Goal Example 1
+    description: Goal Example 1
+    exampleCanonical: http://touchstone.aegis.net/touchstone/fhir/dev-satisfaction/StructureDefinition/dev-satisfaction-goal
+
   Observation/Observation1:
     name: Observation Example 1
     description: Observation Example 1
-    exampleCanonical: http://hl7.org/fhir/uv/dev-satisfaction/StructureDefinition/dev-satisfaction-observation
+    exampleCanonical: http://touchstone.aegis.net/touchstone/fhir/dev-satisfaction/StructureDefinition/dev-satisfaction-observation
+
+  Observation/Observation2:
+    name: Observation Example 2
+    description: Observation Example 2
+    exampleCanonical: http://touchstone.aegis.net/touchstone/fhir/dev-satisfaction/StructureDefinition/dev-satisfaction-observation

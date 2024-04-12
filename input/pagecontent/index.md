@@ -1,4 +1,11 @@
-The Developer Satisfaction Implementation Guide demonstrates the Developer Satisfaction process that can be leveraged in FHIR IG authoring and subsequent implementation efforts.
+
+<strong>The Developer Satisfaction Implementation Guide is a fictitious guide that demonstrates and illustrates how implementation requirements and conformance testing are current defined prior to the release of the new R5 testing conformance resources:</strong>
+
+* <strong>[ActorDefinition](http://hl7.org/fhir/R5/actordefinition.html)</strong>
+* <strong>[Requirements](http://hl7.org/fhir/R5/requirements.html)</strong>
+* <strong>[TestPlan](http://hl7.org/fhir/R5/testplan.html)</strong>.
+
+`This first, initial 0.1.0 version illustrates the current state of affairs with requirements definition without the new R5 testing conformance resources.`
 
 ### About This Guide
 
@@ -18,7 +25,7 @@ See
 | **Role** | **Name** | **Organization** |
 | -------- | -------- | ---------------- |
 | Author | Richard Ettema | AEGIS.net, Inc. |
-| Author | Jeff Hellman | AEGIS.net, Inc. |
+| Author | Jeff Helman | AEGIS.net, Inc. |
 {: .grid }
 
 The authors gratefully acknowledge the many contributions from numerous users and facilitators who helped shape, mature, debug, and advance Developer Satisfaction:

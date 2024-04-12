@@ -17,7 +17,7 @@ Description:   "This operation is used to get the satisfaction measurement based
 * parameter[=].use           = #in
 * parameter[=].min           = 0
 * parameter[=].max           = "1"
-* parameter[=].documentation = "An optional query parameters on Observation to limit the measurement to those satisfaction observations."
+* parameter[=].documentation = "Optional list of query parameters on Observation to limit the measurement to those satisfaction observations."
 
 * parameter[+].name          = #measurement
 * parameter[=].type          = #decimal
@@ -25,3 +25,10 @@ Description:   "This operation is used to get the satisfaction measurement based
 * parameter[=].min           = 1
 * parameter[=].max           = "1"
 * parameter[=].documentation = "The computed satisfaction measurement value."
+
+* parameter[+].name          = #interpretation
+* parameter[=].type          = #string
+* parameter[=].use           = #out
+* parameter[=].min           = 1
+* parameter[=].max           = "1"
+* parameter[=].documentation = "An interpretation description of the satisfaction measurement value."
