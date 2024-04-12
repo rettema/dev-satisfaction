@@ -1,10 +1,14 @@
 
 The FHIR Developer Satisfaction Model is composed of:
 
-### Observed Satisfactions
+### Satisfaction Observations
 
-Description here.
+Description TBD
 
-### Satisfaction Measures
+### Satisfaction Goals
 
-Description here.
+Description TBD
+
+### Satisfaction Measurements
+
+Description TBD

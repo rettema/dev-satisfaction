@@ -2,22 +2,21 @@
 // Alias Definitions
 // =================================================
 
-Alias: $OP = http://hl7.org/fhir/restful-interaction
+Alias: $OP = http://terminology.hl7.org/CodeSystem/testscript-operation-codes
 Alias: $OPEXT = http://terminology.hl7.org/CodeSystem/testscript-operation-codes-extended
 
 // =================================================
 // TestScript meta data declaration
 // =================================================
 
-RuleSet: TSMetadata (id, baseUrl, date, title, description)
+RuleSet: TSMetadata (id, baseUrl, date, description)
 //sets basic Testscript metadata based on common fixed values in testscript authoring
 //example:
-//* insert TSMetadata(testscript-example,http://hl7.org/fhir,2022-06-07,"HL7 FHIR R4 (v4.0.1) TestScript Example","Example TestScript for profile validation")
+//* insert TSMetadata(testscript-example,http://hl7.org/fhir,2022-06-07,"Example TestScript for profile validation")
 
 * id = "{id}"
 * url = "{baseUrl}/TestScript/{id}"
 * name = "{id}"
-* title = {title}
 * date = "{date}"
 * description = {description}
 * status = #active
@@ -76,16 +75,18 @@ RuleSet: TSBaseProfile (resourceType)
 //example:
 //* insert TSBaseProfile(Patient)
 
-* profile[+] = "http://hl7.org/fhir/StructureDefinition/{resourceType}"
+* profile[+]
   * id = "{resourceType}Profile"
+  * reference = "http://hl7.org/fhir/StructureDefinition/{resourceType}"
 
 RuleSet: TSProfile (id, reference)
 //add a TestScript profile element needed for a validateProfileId assert
 //example:
 //* insert TSProfile(uscore-patient-profile,"http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient")
 
-* profile[+] = {reference}
+* profile[+]
   * id = "{id}"
+  * reference = {reference}
 
 // =================================================
 // TestScript variable declarations
@@ -175,17 +176,16 @@ RuleSet: TSSetupOperationResource (opCode, resourceType, format, origin, destina
   * encodeRequestUrl = true
   * origin = {origin}
 
-RuleSet: TSSetupAssert(description, direction, stopTestOnFail, warning)
+RuleSet: TSSetupAssert(description, warning, direction)
 //more flexible assert definition that can be used in less constricted testscript authoring but needs the actual assert to be defined afterwords
 //example: 
-//* insert TSSetupAssert("Confirm that the returned HTTP Header Content-Type is present.",#response,false,false)
+//* insert TSSetupAssert("Confirm that the returned HTTP Header Content-Type is present.",false,#response)
 //* setup.action[=].assert.headerField = "Content-Type"
 //* setup.action[=].assert.operator = #notEmpty
 
 * setup.action[+].assert
   * description = {description}
   * direction = #{direction}
-  * stopTestOnFail = {stopTestOnFail}
   * warningOnly = {warning}
 
 // =================================================
@@ -244,29 +244,27 @@ RuleSet: TSTestOperationResource (opCode, resourceType, format, origin, destinat
   * origin = {origin}
   * params = {params}
 
-RuleSet: TSTestAssert(description, direction, stopTestOnFail, warning)
+RuleSet: TSTestAssert(description, warning, direction)
 //more flexible assert definition that can be used in less constricted testscript authoring but needs the actual assert to be defined afterwords
 //example: 
-//* insert TSTestAssert("Confirm that the returned HTTP Header Content-Type is present.",#response,false,false)
+//* insert TSTestAssert("Confirm that the returned HTTP Header Content-Type is present.",false,#response)
 //* test[=].action[=].assert.headerField = "Content-Type"
 //* test[=].action[=].assert.operator = #notEmpty
 
 * test[=].action[+].assert
   * description = {description}
   * direction = {direction}
-  * stopTestOnFail = {stopTestOnFail}
   * warningOnly = {warning}
 
-RuleSet: TSTestAssertWithProp(description, direction, stopTestOnFail, warning, property, value)
+RuleSet: TSTestAssertWithProp(description, warning, direction, property, value)
 //more flexible assert definition that can be used in less constricted testscript authoring but needs the actual assert to be defined afterwords
 //example: 
-//* insert TSTestAssert("Confirm that the returned HTTP Header Content-Type is present.",#response,false,false,responseCode,"200")
+//* insert TSTestAssert("Confirm that the returned HTTP Header Content-Type is present.",false,#response)
 //* test[=].action[=].assert.headerField = "Content-Type"
 //* test[=].action[=].assert.operator = #notEmpty
 
 * test[=].action[+].assert
   * description = {description}
   * direction = {direction}
-  * stopTestOnFail = {stopTestOnFail}
   * warningOnly = {warning}
   * {property} = {value}

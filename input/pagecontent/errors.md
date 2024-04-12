@@ -3,12 +3,12 @@ Errors can occur at any point in the processing or delivery of a satisfication. 
 
 ### Handling Errors as a Server
 
-Description here.
+Description TBD
 
 ### Handling Errors as a Client
 
-Description here.
+Description TBD
 
 ### Recovering from Errors
 
-Description here.
+Description TBD

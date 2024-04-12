@@ -2,7 +2,7 @@ Alias: $exp = http://hl7.org/fhir/StructureDefinition/capabilitystatement-expect
 
 RuleSet: CapabilityCommon
 * status              = #active
-* date                = "2023-05-17"
+* date                = "2024-04-10"
 * publisher           = "AEGIS.net, Inc."
 // * contact[0].telecom[0].system = #url
 // * contact[0].telecom[0].value  = "https://hl7.org/Special/committees/fiwg/index.cfm"
@@ -64,24 +64,84 @@ RuleSet: SupportOperation (name, canonical, expectation)
 * rest.resource[=].operation[=].extension[0].url = $exp
 * rest.resource[=].operation[=].extension[0].valueCode = {expectation}
 
-Instance:      CapabilitySatisfactionServerR5
+RuleSet: GlobalOperationNoExp (name, canonical)
+// This rule set defines a global operation.
+* rest.operation[+].name = "{name}"
+* rest.operation[=].definition = "{canonical}"
+
+Instance:      CapabilitySatisfactionProviderR4
 InstanceOf:    CapabilityStatement
 Usage:         #definition
-Title:         "R5 Developer Satisfaction Server Capability Statement"
-Description:   "CapabilityStatement describing the minimal required capabilities of a FHIR Server supporting the Developer Satisfaction functionality."
-* insert ResourceCommonR5
-* id            = "dev-satisfaction-server-r5"
-* name          = "CapabilitySatisfactionServerR5"
-* url           = "http://hl7.org/fhir/uv/dev-satisfaction/CapabilityStatement/dev-satisfaction-server-r5"
-* description   = "CapabilityStatement describing the required and optional capabilities of a FHIR Server supporting the Developer Satisfaction functionality."
-* implementationGuide = "http://hl7.org/fhir/uv/dev-satisfaction/ImplementationGuide/hl7.fhir.uv.dev-satisfaction"
+Title:         "R4 Developer Satisfaction Provider Capability Statement"
+Description:   "CapabilityStatement describing the minimal required capabilities of a FHIR Client supporting the Developer Satisfaction Provider functionality."
+* insert ResourceCommonR4
+* id            = "dev-satisfaction-provider-r4"
+* name          = "CapabilitySatisfactionProviderR4"
+* url           = "http://touchstone.aegis.net/touchstone/fhir/dev-satisfaction/CapabilityStatement/dev-satisfaction-provider-r4"
+* description   = "CapabilityStatement describing the required and optional capabilities of a FHIR Client supporting the Developer Satisfaction Provider functionality."
 * insert CapabilityCommon
-* rest[+].mode  = #server
 
-* insert SupportResource(Observation, #SHALL)
-* insert SupportProfile(http://hl7.org/fhir/uv/dev-satisfaction/StructureDefinition/dev-satisfaction-observation, #SHALL)
+* rest[+].mode  = #client
+* rest[=].mode.extension[http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation].valueCode = #SHALL
+
+* insert SupportResource(Goal, #SHALL)
+* insert SupportProfile(http://touchstone.aegis.net/touchstone/fhir/dev-satisfaction/StructureDefinition/dev-satisfaction-goal, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#create, #SHALL)
 * insert SupportInteraction(#update, #SHOULD)
 * insert SupportInteraction(#delete, #SHOULD)
-* insert SupportOperation($get-satisfaction, http://hl7.org/fhir/uv/dev-satisfaction/OperationDefinition/dev-satisfaction-get-satisfaction, #SHALL)
+
+* insert SupportResource(Observation, #SHALL)
+* insert SupportProfile(http://touchstone.aegis.net/touchstone/fhir/dev-satisfaction/StructureDefinition/dev-satisfaction-observation, #SHALL)
+* insert SupportInteraction(#read, #SHALL)
+* insert SupportInteraction(#create, #SHALL)
+* insert SupportInteraction(#update, #SHOULD)
+* insert SupportInteraction(#delete, #SHOULD)
+
+Instance:      CapabilitySatisfactionRequestorR4
+InstanceOf:    CapabilityStatement
+Usage:         #definition
+Title:         "R4 Developer Satisfaction Requestor Capability Statement"
+Description:   "CapabilityStatement describing the minimal required capabilities of a FHIR Client supporting the Developer Satisfaction Requestor functionality."
+* insert ResourceCommonR4
+* id            = "dev-satisfaction-requestor-r4"
+* name          = "CapabilitySatisfactionRequestorR4"
+* url           = "http://touchstone.aegis.net/touchstone/fhir/dev-satisfaction/CapabilityStatement/dev-satisfaction-requestor-r4"
+* description   = "CapabilityStatement describing the required and optional capabilities of a FHIR Client supporting the Developer Satisfaction Requestor functionality."
+* insert CapabilityCommon
+
+* rest[+].mode  = #client
+* rest[=].mode.extension[http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation].valueCode = #SHALL
+
+* insert GlobalOperationNoExp(get-satisfaction, http://touchstone.aegis.net/touchstone/fhir/dev-satisfaction/OperationDefinition/dev-satisfaction-get-satisfaction)
+
+Instance:      CapabilitySatisfactionResponderR4
+InstanceOf:    CapabilityStatement
+Usage:         #definition
+Title:         "R4 Developer Satisfaction Responder Capability Statement"
+Description:   "CapabilityStatement describing the minimal required capabilities of a FHIR Server supporting the Developer Satisfaction Responder functionality."
+* insert ResourceCommonR4
+* id            = "dev-satisfaction-responder-r4"
+* name          = "CapabilitySatisfactionResponderR4"
+* url           = "http://touchstone.aegis.net/touchstone/fhir/dev-satisfaction/CapabilityStatement/dev-satisfaction-responder-r4"
+* description   = "CapabilityStatement describing the required and optional capabilities of a FHIR Server supporting the Developer Satisfaction Responder functionality."
+* insert CapabilityCommon
+
+* rest[+].mode  = #server
+* rest[=].mode.extension[http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation].valueCode = #SHALL
+
+* insert SupportResource(Goal, #SHALL)
+* insert SupportProfile(http://touchstone.aegis.net/touchstone/fhir/dev-satisfaction/StructureDefinition/dev-satisfaction-goal, #SHALL)
+* insert SupportInteraction(#read, #SHALL)
+* insert SupportInteraction(#create, #SHALL)
+* insert SupportInteraction(#update, #SHOULD)
+* insert SupportInteraction(#delete, #SHOULD)
+
+* insert SupportResource(Observation, #SHALL)
+* insert SupportProfile(http://touchstone.aegis.net/touchstone/fhir/dev-satisfaction/StructureDefinition/dev-satisfaction-observation, #SHALL)
+* insert SupportInteraction(#read, #SHALL)
+* insert SupportInteraction(#create, #SHALL)
+* insert SupportInteraction(#update, #SHOULD)
+* insert SupportInteraction(#delete, #SHOULD)
+
+* insert GlobalOperationNoExp(get-satisfaction, http://touchstone.aegis.net/touchstone/fhir/dev-satisfaction/OperationDefinition/dev-satisfaction-get-satisfaction)
