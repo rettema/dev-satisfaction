@@ -1,0 +1,176 @@
+{
+  "resourceType": "TestPlan",
+  "id": "DEVSATTestPlanResponder",
+  "url": "http://touchstone.aegis.net/touchstone/fhir/dev-satisfaction/TestPlan/DEVSATTestPlanResponder",
+  "name": "DEVSATTestPlanResponder",
+  "title": "HL7 FHIR R4 TestPlan Responder",
+  "date": "2024-04-11",
+  "description": "TestPlan to verify the conformance of a FHIR server acting as a Developer Satisfaction Responder",
+  "status": "active",
+  "publisher": "AEGIS.net, Inc.",
+  "contact": [
+    {
+      "name": "AEGIS.net, Inc.",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.aegis.net"
+        }
+      ]
+    }
+  ],
+  "copyright": "(c) AEGIS.net, Inc. 2024",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://hl7.org/fhir/testscript-scope-phase-codes",
+          "code": "integration"
+        }
+      ]
+    }
+  ],
+  "scope": [
+    {
+      "reference": "CapabilityStatement/dev-satisfaction-responder-r4"
+    },
+    {
+      "reference": "StructureDefinition/dev-satisfaction-observation"
+    }
+  ],
+  "testTools": "Touchstone FHIR Testing Platform - https://touchstone.com",
+  "testCase": [
+    {
+      "sequence": 1,
+      "testRun": [
+        {
+          "narrative": "Get the Developer Satisfaction Responder FHIR Server's JSON formatted CapabilityStatement and validate against the Developer Satisfaction Responder actor CapabilityStatement",
+          "script": {
+            "language": {
+              "text": "TestScript"
+            },
+            "sourceReference": {
+              "reference": "TestScript/DEVSATCapabilitiesResponderjson"
+            }
+          }
+        },
+        {
+          "narrative": "Get the Developer Satisfaction Responder FHIR Server's XML formatted CapabilityStatement and validate against the Developer Satisfaction Responder actor CapabilityStatement",
+          "script": {
+            "language": {
+              "text": "TestScript"
+            },
+            "sourceReference": {
+              "reference": "TestScript/DEVSATCapabilitiesResponderxml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "sequence": 2,
+      "testRun": [
+        {
+          "narrative": "Read a JSON formatted Goal and validate against the Developer Satisfaction IG",
+          "script": {
+            "language": {
+              "text": "TestScript"
+            },
+            "sourceReference": {
+              "reference": "TestScript/DEVSATGoalreadvalidatejson"
+            }
+          }
+        },
+        {
+          "narrative": "Read an XML formatted Goal and validate against the Developer Satisfaction IG",
+          "script": {
+            "language": {
+              "text": "TestScript"
+            },
+            "sourceReference": {
+              "reference": "TestScript/DEVSATGoalreadvalidatexml"
+            }
+          }
+        }
+      ],
+      "testData": [
+        {
+          "type": {
+            "system": "http://example.org/fhir/testplan/testData-type",
+            "code": "example"
+          },
+          "content": {
+            "reference": "Goal/Goal1"
+          },
+          "sourceString": "Example Goal1"
+        }
+      ]
+    },
+    {
+      "sequence": 3,
+      "testRun": [
+        {
+          "narrative": "Read a JSON formatted Observation and validate against the Developer Satisfaction IG",
+          "script": {
+            "language": {
+              "text": "TestScript"
+            },
+            "sourceReference": {
+              "reference": "TestScript/DEVSATObservationreadvalidatejson"
+            }
+          }
+        },
+        {
+          "narrative": "Read an XML formatted Observation and validate against the Developer Satisfaction IG",
+          "script": {
+            "language": {
+              "text": "TestScript"
+            },
+            "sourceReference": {
+              "reference": "TestScript/DEVSATObservationreadvalidatexml"
+            }
+          }
+        }
+      ],
+      "testData": [
+        {
+          "type": {
+            "system": "http://example.org/fhir/testplan/testData-type",
+            "code": "example"
+          },
+          "content": {
+            "reference": "Observation/Observation1"
+          },
+          "sourceString": "Example Observation1"
+        }
+      ]
+    },
+    {
+      "sequence": 4,
+      "testRun": [
+        {
+          "narrative": "Send a $get-satification request to a Responder Actor for a JSON formatted response payload and validate the returned Parameters against the Developer Satisfaction IG",
+          "script": {
+            "language": {
+              "text": "TestScript"
+            },
+            "sourceReference": {
+              "reference": "TestScript/DEVSATObservationgetsatjson"
+            }
+          }
+        },
+        {
+          "narrative": "Send a $get-satification request to a Responder Actor for an XML formatted response payload and validate the returned Parameters against the Developer Satisfaction IG",
+          "script": {
+            "language": {
+              "text": "TestScript"
+            },
+            "sourceReference": {
+              "reference": "TestScript/DEVSATObservationgetsatxml"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

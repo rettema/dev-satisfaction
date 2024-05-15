@@ -1,0 +1,25 @@
+{
+  "resourceType" : "ActorDefinition",
+  "id" : "dev-satisfaction-provider",
+  "url" : "http://touchstone.aegis.net/touchstone/fhir/dev-satisfaction/ActorDefinition/dev-satisfaction-provider",
+  "name" : "DevSatisfactionProvider",
+  "title" : "Developer Satisfaction Provider",
+  "status" : "draft",
+  "date": "2024-04-11",
+  "publisher": "AEGIS.net, Inc.",
+  "contact": [
+    {
+      "name": "AEGIS.net, Inc.",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.aegis.net"
+        }
+      ]
+    }
+  ],
+  "description" : "Developer Satisfaction Provider actor",
+  "copyright": "(c) AEGIS.net, Inc. 2024",
+  "type" : "system",
+  "documentation" : "An application or product that generates developer satisfaction measurement data and sends that data to the Developer Satisfaction Responder. This can be thought of as the client sending a create interaction of an observed satisfaction measurement to the target server."
+}
