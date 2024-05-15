@@ -1,0 +1,25 @@
+{
+  "resourceType" : "ActorDefinition",
+  "id" : "dev-satisfaction-requestor",
+  "url" : "http://touchstone.aegis.net/touchstone/fhir/dev-satisfaction/ActorDefinition/dev-satisfaction-requestor",
+  "name" : "DevSatisfactionRequestor",
+  "title" : "Developer Satisfaction Requestor",
+  "status" : "draft",
+  "date": "2024-04-11",
+  "publisher": "AEGIS.net, Inc.",
+  "contact": [
+    {
+      "name": "AEGIS.net, Inc.",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.aegis.net"
+        }
+      ]
+    }
+  ],
+  "description" : "Developer Satisfaction Requestor actor",
+  "copyright": "(c) AEGIS.net, Inc. 2024",
+  "type" : "system",
+  "documentation" : "An application or product that initiates a data access request conformant to the Developer Satisfaction IG to receive satisfaction measurement aggregated data. This can be thought of as the client in a client-server interaction."
+}

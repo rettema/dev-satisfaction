@@ -1,0 +1,79 @@
+{
+  "resourceType" : "Requirements",
+  "id" : "DEVSATRequirementsRequestor",
+  "url": "http://touchstone.aegis.net/touchstone/fhir/dev-satisfaction/Requirements/DEVSATRequirementsRequestor",
+  "name": "DEVSATRequirementsRequestor",
+  "title": "Developer Satisfaction Requirements for the Requestor Actor",
+  "status" : "draft",
+  "date": "2024-04-11",
+  "publisher": "AEGIS.net, Inc.",
+  "contact": [
+    {
+      "name": "AEGIS.net, Inc.",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.aegis.net"
+        }
+      ]
+    }
+  ],
+  "description" : "Developer Satisfaction Requirements for the Requestor Actor",
+  "copyright": "(c) AEGIS.net, Inc. 2024",
+  "actor" : [
+    "http://touchstone.aegis.net/touchstone/fhir/dev-satisfaction/ActorDefinition/dev-satisfaction-requestor"
+  ],
+  "statement" : [
+    {
+      "key" : "capstmt-1",
+      "label" : "capstmt-1",
+      "conformance" : [
+        "SHALL"
+      ],
+      "requirement" : "The Developer Satisfaction Requestor SHALL support the CapabilityStatement metadata operation and return a valid CapabilityStatement conformant to the base FHIR specification.",
+      "satisfiedBy" : [
+        "http://touchstone.aegis.net/touchstone/fhir/dev-satisfaction/TestScript/DEVSATCapabilitiesRequestorjson",
+        "http://touchstone.aegis.net/touchstone/fhir/dev-satisfaction/TestScript/DEVSATCapabilitiesRequestorxml"
+      ],
+      "source" : [
+        {
+          "display" : "AEGIS.net, Inc."
+        }
+      ]
+    },
+    {
+      "key" : "capstmt-2",
+      "label" : "capstmt-2",
+      "conformance" : [
+        "SHALL"
+      ],
+      "requirement" : "The Developer Satisfaction Requestor SHALL support the CapabilityStatement metadata operation and return a valid CapabilityStatement that instantiates the Developer Satisfaction Requestor CapabilityStatement.",
+      "satisfiedBy" : [
+        "http://touchstone.aegis.net/touchstone/fhir/dev-satisfaction/TestScript/DEVSATCapabilitiesRequestorjson",
+        "http://touchstone.aegis.net/touchstone/fhir/dev-satisfaction/TestScript/DEVSATCapabilitiesRequestorxml"
+      ],
+      "source" : [
+        {
+          "display" : "AEGIS.net, Inc."
+        }
+      ]
+    },
+    {
+      "key" : "get-satisfaction-1",
+      "label" : "get-satisfaction-1",
+      "conformance" : [
+        "SHALL"
+      ],
+      "requirement" : "The Developer Satisfaction Requestor SHALL support sending a conformant Developer Satisfaction $get-satisfaction operation.",
+      "satisfiedBy" : [
+        "http://touchstone.aegis.net/touchstone/fhir/dev-satisfaction/TestScript/DEVSATObservationgetsatjson",
+        "http://touchstone.aegis.net/touchstone/fhir/dev-satisfaction/TestScript/DEVSATObservationgetsatxml"
+      ],
+      "source" : [
+        {
+          "display" : "AEGIS.net, Inc."
+        }
+      ]
+    }
+  ]
+}

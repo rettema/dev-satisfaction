@@ -1,0 +1,98 @@
+{
+  "resourceType": "TestPlan",
+  "id": "DEVSATTestPlanRequestor",
+  "url": "http://touchstone.aegis.net/touchstone/fhir/dev-satisfaction/TestPlan/DEVSATTestPlanRequestor",
+  "name": "DEVSATTestPlanRequestor",
+  "title": "HL7 FHIR R4 TestPlan Requestor",
+  "date": "2024-04-11",
+  "description": "TestPlan to verify the conformance of a FHIR server acting as a Developer Satisfaction Requestor",
+  "status": "active",
+  "publisher": "AEGIS.net, Inc.",
+  "contact": [
+    {
+      "name": "AEGIS.net, Inc.",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.aegis.net"
+        }
+      ]
+    }
+  ],
+  "copyright": "(c) AEGIS.net, Inc. 2024",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://hl7.org/fhir/testscript-scope-phase-codes",
+          "code": "integration"
+        }
+      ]
+    }
+  ],
+  "scope": [
+    {
+      "reference": "CapabilityStatement/dev-satisfaction-requestor-r4"
+    },
+    {
+      "reference": "StructureDefinition/dev-satisfaction-observation"
+    }
+  ],
+  "testTools": "Touchstone FHIR Testing Platform - https://touchstone.com",
+  "testCase": [
+    {
+      "sequence": 1,
+      "testRun": [
+        {
+          "narrative": "Get the Developer Satisfaction Requestor FHIR Server's JSON formatted CapabilityStatement and validate against the Developer Satisfaction Requestor actor CapabilityStatement",
+          "script": {
+            "language": {
+              "text": "TestScript"
+            },
+            "sourceReference": {
+              "reference": "TestScript/DEVSATCapabilitiesRequestorjson"
+            }
+          }
+        },
+        {
+          "narrative": "Get the Developer Satisfaction Requestor FHIR Server's XML formatted CapabilityStatement and validate against the Developer Satisfaction Requestor actor CapabilityStatement",
+          "script": {
+            "language": {
+              "text": "TestScript"
+            },
+            "sourceReference": {
+              "reference": "TestScript/DEVSATCapabilitiesRequestorxml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "sequence": 2,
+      "testRun": [
+        {
+          "narrative": "Send a $get-satification request to a Responder Actor for a JSON formatted response payload and validate the returned Parameters against the Developer Satisfaction IG",
+          "script": {
+            "language": {
+              "text": "TestScript"
+            },
+            "sourceReference": {
+              "reference": "TestScript/DEVSATObservationgetsatjson"
+            }
+          }
+        },
+        {
+          "narrative": "Send a $get-satification request to a Responder Actor for an XML formatted response payload and validate the returned Parameters against the Developer Satisfaction IG",
+          "script": {
+            "language": {
+              "text": "TestScript"
+            },
+            "sourceReference": {
+              "reference": "TestScript/DEVSATObservationgetsatxml"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

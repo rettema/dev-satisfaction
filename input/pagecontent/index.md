@@ -1,11 +1,11 @@
 
-<strong>The Developer Satisfaction Implementation Guide is a fictitious guide that demonstrates and illustrates how implementation requirements and conformance testing are current defined prior to the release of the new R5 testing conformance resources:</strong>
+<strong>The Developer Satisfaction Implementation Guide is a fictitious guide that demonstrates and illustrates how implementation requirements and conformance testing are currently defined prior to the use of the new R5 testing conformance resources and potentially defined with their use.</strong>
 
 * <strong>[ActorDefinition](http://hl7.org/fhir/R5/actordefinition.html)</strong>
 * <strong>[Requirements](http://hl7.org/fhir/R5/requirements.html)</strong>
 * <strong>[TestPlan](http://hl7.org/fhir/R5/testplan.html)</strong>.
 
-`This first, initial 0.1.0 version illustrates the current state of affairs with requirements definition without the new R5 testing conformance resources.`
+`This second 0.2.0 version illustrates the potential next state of affairs with requirements definition with the new R5 testing conformance resources.`
 
 ### About This Guide
 

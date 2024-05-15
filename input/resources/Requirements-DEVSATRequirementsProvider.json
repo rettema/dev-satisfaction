@@ -1,0 +1,114 @@
+{
+  "resourceType" : "Requirements",
+  "id" : "DEVSATRequirementsProvider",
+  "url": "http://touchstone.aegis.net/touchstone/fhir/dev-satisfaction/Requirements/DEVSATRequirementsProvider",
+  "name": "DEVSATRequirementsProvider",
+  "title": "Developer Satisfaction Requirements for the Provider Actor",
+  "status" : "draft",
+  "date": "2024-04-11",
+  "publisher": "AEGIS.net, Inc.",
+  "contact": [
+    {
+      "name": "AEGIS.net, Inc.",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.aegis.net"
+        }
+      ]
+    }
+  ],
+  "description" : "Developer Satisfaction Requirements for the Provider Actor",
+  "copyright": "(c) AEGIS.net, Inc. 2024",
+  "actor" : [
+    "http://touchstone.aegis.net/touchstone/fhir/dev-satisfaction/ActorDefinition/dev-satisfaction-provider"
+  ],
+  "statement" : [
+    {
+      "key" : "capstmt-1",
+      "label" : "capstmt-1",
+      "conformance" : [
+        "SHALL"
+      ],
+      "requirement" : "The Developer Satisfaction Provider SHALL support the CapabilityStatement metadata operation and return a valid CapabilityStatement conformant to the base FHIR specification.",
+      "satisfiedBy" : [
+        "http://touchstone.aegis.net/touchstone/fhir/dev-satisfaction/TestScript/DEVSATCapabilitiesProviderjson",
+        "http://touchstone.aegis.net/touchstone/fhir/dev-satisfaction/TestScript/DEVSATCapabilitiesProviderxml"
+      ],
+      "source" : [
+        {
+          "display" : "AEGIS.net, Inc."
+        }
+      ]
+    },
+    {
+      "key" : "capstmt-2",
+      "label" : "capstmt-2",
+      "conformance" : [
+        "SHALL"
+      ],
+      "requirement" : "The Developer Satisfaction Provider SHALL support the CapabilityStatement metadata operation and return a valid CapabilityStatement that instantiates the Developer Satisfaction Provider CapabilityStatement.",
+      "satisfiedBy" : [
+        "http://touchstone.aegis.net/touchstone/fhir/dev-satisfaction/TestScript/DEVSATCapabilitiesProviderjson",
+        "http://touchstone.aegis.net/touchstone/fhir/dev-satisfaction/TestScript/DEVSATCapabilitiesProviderxml"
+      ],
+      "source" : [
+        {
+          "display" : "AEGIS.net, Inc."
+        }
+      ]
+    },
+    {
+      "key" : "create-goal-1",
+      "label" : "create-goal-1",
+      "conformance" : [
+        "SHALL"
+      ],
+      "requirement" : "The Developer Satisfaction Provider SHALL support sending a conformant FHIR specification Goal create operation.",
+      "source" : [
+        {
+          "display" : "AEGIS.net, Inc."
+        }
+      ]
+    },
+    {
+      "key" : "create-goal-2",
+      "label" : "create-goal-2",
+      "conformance" : [
+        "SHALL"
+      ],
+      "requirement" : "The Developer Satisfaction Provider SHALL support sending a conformant FHIR specification Goal create operation with a Developer Satisfaction Goal Profile conformant payload.",
+      "source" : [
+        {
+          "display" : "AEGIS.net, Inc."
+        }
+      ]
+    },
+    {
+      "key" : "create-observation-1",
+      "label" : "create-observation-1",
+      "conformance" : [
+        "SHALL"
+      ],
+      "requirement" : "The Developer Satisfaction Provider SHALL support sending a conformant FHIR specification Observation create operation.",
+      "source" : [
+        {
+          "display" : "AEGIS.net, Inc."
+        }
+      ]
+    },
+    {
+      "key" : "create-observation-2",
+      "label" : "create-observation-2",
+      "conformance" : [
+        "SHALL"
+      ],
+      "requirement" : "The Developer Satisfaction Provider SHALL support sending a conformant FHIR specification Observation create operation with a Developer Satisfaction Observation Profile conformant payload.",
+      "source" : [
+        {
+          "display" : "AEGIS.net, Inc."
+        }
+      ]
+    }
+  ]
+}

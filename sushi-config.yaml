@@ -12,8 +12,8 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: net.aegis.touchstone.fhir.dev-satisfaction
 canonical: http://touchstone.aegis.net/touchstone/fhir/dev-satisfaction
-version: 0.1.0
-name: DeveloperSatisfaction
+version: 0.2.0
+name: DevSat020
 title: Developer Satisfaction
 status: active
 publisher:
@@ -24,8 +24,9 @@ contact:
     telecom:
       - system: email
         value: mailto:richard.ettema@aegis.net
-description: The Developer Satisfaction Implementation Guide is a fictitious guide used to
-  demonstrate the use of TDD techniques that accelerate the implementation of an IG
+description: The Developer Satisfaction Implementation Guide is a fictitious guide that demonstrates
+ and illustrates how implementation requirements and conformance testing are current defined prior
+ to the release of the new R5 testing conformance resources.
 license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
@@ -69,11 +70,14 @@ menu:
     Conformance: conformance.html
     Handling Errors: errors.html
   Safety and Security: safety_security.html
-  Testing: testing.html
+  Requirements and Testing: testing.html
   Artifacts:
+    Actors: artifacts.html#requirements-actor-definitions
+    Requirements: artifacts.html#requirements-formal-requirements
     Capability Statements: artifacts.html#behavior-capability-statements
     Operations: artifacts.html#behavior-operation-definitions
     Profiles: artifacts.html#structures-resource-profiles
+    TestPlans: artifacts.html#testing-artifacts-testplans
     TestScripts: artifacts.html#testing-artifacts-testscripts
     Examples: artifacts.html#example-example-instances
   Support:
@@ -95,7 +99,7 @@ pages:
   safety_security.md:
     title: Safety and Security
   testing.md:
-    title: Testing Conformance
+    title: Requirements and Testing
   downloads.md:
     title: Downloads
   history.md:
